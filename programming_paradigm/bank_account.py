@@ -1,12 +1,11 @@
 class BankAccount:
-  
+
     def __init__(self, initial_balance=0):
         """
         Initializes the BankAccount with an optional starting balance.
         """
-        # Encapsulation: Using a private-like attribute (by convention)
-        # to store the balance, requiring interaction through methods.
-        self._account_balance = initial_balance
+        # Ensure the initial balance is treated as a float
+        self._account_balance = float(initial_balance) 
 
     def deposit(self, amount):
         """
@@ -27,6 +26,8 @@ class BankAccount:
 
     def display_balance(self):
         """
-        Prints the current account balance in a user-friendly format.
+        Prints the current account balance formatted with two decimal places.
         """
-        print(f"Current Balance: ${self._account_balance}")
+        # FIX: Use f-string formatting with ':.2f' to display two decimal places
+        # This will convert 250 to 250.00
+        print(f"Current Balance: ${self._account_balance:.2f}") 

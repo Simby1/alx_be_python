@@ -36,7 +36,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.subtract(5, -3), 8)
 
 
-    def test_multiply(self):
+    def test_multiplication(self):
         """
         Test the multiply method covering positive, negative, and zero.
         """
@@ -50,7 +50,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.multiply(100, 0), 0)
 
 
-    def test_divide(self):
+    def test_division(self):
         """
         Test the divide method covering standard division and division by zero.
         """
